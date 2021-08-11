@@ -3,7 +3,8 @@
 set -e
 set -o errexit
 
-convert $(find | grep img/Screenshot | sort -n | paste -sd\ ) slides-debug.pdf
+# convert $(find | grep img/Screenshot | sort -n | paste -sd\ ) slides-debug.pdf
+rm *.pdf
 
 mkdir -p cropped/img
 for img in img/*.png; do
