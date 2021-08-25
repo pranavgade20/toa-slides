@@ -38,5 +38,5 @@ jobs:
       - name: Upload file
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
+          CHAT_ID: ${{ secrets.GROUP_ID }}
         run: curl -F document=@"slides.pdf" "https://api.telegram.org/bot$BOT_TOKEN/sendDocument?chat_id=$CHAT_ID"
